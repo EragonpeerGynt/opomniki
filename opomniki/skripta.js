@@ -14,13 +14,19 @@ window.addEventListener('load', function() {
 	
 	//zaznajVnosČasa
 	
-	document.querySelector("#dodajGumb").addEventListener("click", nastaviTimer);
+	
 	
 	var nastaviTimer = function(event) {
 		
+		var imeOpomnika = document.querySelector("#naziv_opomnika").value;
+		var casOpomnika = document.querySelector("#cas_opomnika").value;
 		
-		
+		document.querySelector("#naziv_opomnika").value = "";
+		document.querySelector("#cas_opomnika").value = "";
+		document.querySelector("#opomniki").innerHTML += "<div class='opomnik'> <div class='naziv_opomnika'> "+ imeOpomnika + "</div>  <div class='cas_opomnika'> Opomnik čez <span>" + casOpomnika + "</span> sekund.</div> </div>";
 	}
+	
+	document.querySelector("#dodajGumb").addEventListener("click", nastaviTimer);
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
