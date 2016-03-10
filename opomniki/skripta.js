@@ -1,5 +1,26 @@
 window.addEventListener('load', function() {
 	//stran nalozena
+	
+	//Izvedi prijavo
+	
+	var izvediPrijavo = function(event) {
+		
+		var uporabnik = document.querySelector("#uporabnisko_ime").value;
+		document.querySelector("#uporabnik").innerHTML = uporabnik;
+		document.querySelector(".pokrivalo").style.visibility = "hidden";
+		
+	}
+	document.querySelector("#prijavniGumb").addEventListener("click", izvediPrijavo);
+	
+	//zaznajVnosČasa
+	
+	document.querySelector("#dodajGumb").addEventListener("click", nastaviTimer);
+	
+	var nastaviTimer = function(event) {
+		
+		
+		
+	}
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
